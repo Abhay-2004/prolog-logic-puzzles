@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background with subtle grid -->
+    <defs>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f0f0f0" stroke-width="1"/>
+        </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)"/>
+
+    <!-- Title -->
+    <rect x="200" y="20" width="400" height="60" rx="10" fill="#4A90E2" stroke="#2171C7" stroke-width="2"/>
+    <text x="400" y="55" text-anchor="middle" fill="white" font-family="Arial" font-weight="bold" font-size="20">Prolog Logic Implementations</text>
+
+    <!-- Main Categories -->
+    <!-- List Operations -->
+    <g transform="translate(50,120)">
+        <rect width="220" height="150" rx="10" fill="#98D8FF" stroke="#2171C7" stroke-width="2"/>
+        <text x="110" y="30" text-anchor="middle" font-family="Arial" font-weight="bold">List Operations</text>
+        <text x="110" y="55" text-anchor="middle" font-family="Arial" font-size="12">minlist.pl</text>
+        <text x="110" y="75" text-anchor="middle" font-family="Arial" font-size="12">sumMaxList.pl</text>
+        <text x="110" y="95" text-anchor="middle" font-family="Arial" font-size="12">postfix.pl</text>
+    </g>
+
+    <!-- Grammar & Parsing -->
+    <g transform="translate(290,120)">
+        <rect width="220" height="150" rx="10" fill="#FFD479" stroke="#2171C7" stroke-width="2"/>
+        <text x="110" y="30" text-anchor="middle" font-family="Arial" font-weight="bold">Grammar & Parsing</text>
+        <text x="110" y="55" text-anchor="middle" font-family="Arial" font-size="12">setgrammar.pl</text>
+        <text x="110" y="75" text-anchor="middle" font-family="Arial" font-size="12">Parse Trees</text>
+        <text x="110" y="95" text-anchor="middle" font-family="Arial" font-size="12">Token Processing</text>
+    </g>
+
+    <!-- Word Puzzles -->
+    <g transform="translate(530,120)">
+        <rect width="220" height="150" rx="10" fill="#98FF9F" stroke="#2171C7" stroke-width="2"/>
+        <text x="110" y="30" text-anchor="middle" font-family="Arial" font-weight="bold">Word Puzzles</text>
+        <text x="110" y="55" text-anchor="middle" font-family="Arial" font-size="12">words.pl</text>
+        <text x="110" y="75" text-anchor="middle" font-family="Arial" font-size="12">Pattern Matching</text>
+        <text x="110" y="95" text-anchor="middle" font-family="Arial" font-size="12">Constraints</text>
+    </g>
+
+    <!-- Connections -->
+    <g stroke="#666" stroke-width="2" fill="none">
+        <path d="M 160,270 C 160,320 400,320 400,270" />
+        <path d="M 400,270 C 400,320 640,320 640,270" />
+    </g>
+
+    <!-- Footer -->
+    <rect x="100" y="400" width="600" height="60" rx="10" fill="#F8F9FA" stroke="#DDD" stroke-width="2"/>
+    <text x="400" y="430" text-anchor="middle" font-family="Arial" font-size="14">Prolog Features: Unification • Pattern Matching • Backtracking</text>
+    <text x="400" y="450" text-anchor="middle" font-family="Arial" font-size="12">Logic Programming • Declarative Style • Knowledge Representation</text>
+</svg>
