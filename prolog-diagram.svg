@@ -1,52 +1,85 @@
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-    <!-- Background with subtle grid -->
-    <defs>
-        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f0f0f0" stroke-width="1"/>
-        </pattern>
-    </defs>
-    <rect width="100%" height="100%" fill="url(#grid)"/>
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="100%" height="100%" fill="#f8f9fa"/>
+    
+    <!-- Central Node -->
+    <circle cx="400" cy="100" r="50" fill="#4A90E2" stroke="#2171C7" stroke-width="2"/>
+    <text x="400" y="95" text-anchor="middle" fill="white" font-family="Arial" font-weight="bold" font-size="16">Prolog</text>
+    <text x="400" y="115" text-anchor="middle" fill="white" font-family="Arial" font-size="12">Logic Programs</text>
 
-    <!-- Title -->
-    <rect x="200" y="20" width="400" height="60" rx="10" fill="#4A90E2" stroke="#2171C7" stroke-width="2"/>
-    <text x="400" y="55" text-anchor="middle" fill="white" font-family="Arial" font-weight="bold" font-size="20">Prolog Logic Implementations</text>
-
-    <!-- Main Categories -->
-    <!-- List Operations -->
-    <g transform="translate(50,120)">
-        <rect width="220" height="150" rx="10" fill="#98D8FF" stroke="#2171C7" stroke-width="2"/>
-        <text x="110" y="30" text-anchor="middle" font-family="Arial" font-weight="bold">List Operations</text>
-        <text x="110" y="55" text-anchor="middle" font-family="Arial" font-size="12">minlist.pl</text>
-        <text x="110" y="75" text-anchor="middle" font-family="Arial" font-size="12">sumMaxList.pl</text>
-        <text x="110" y="95" text-anchor="middle" font-family="Arial" font-size="12">postfix.pl</text>
+    <!-- Connection Lines -->
+    <g stroke="#666" stroke-width="2" stroke-dasharray="4">
+        <!-- To List Operations -->
+        <path d="M 370,140 L 200,200" fill="none"/>
+        <!-- To Grammar -->
+        <path d="M 400,150 L 400,200" fill="none"/>
+        <!-- To Word Puzzles -->
+        <path d="M 430,140 L 600,200" fill="none"/>
     </g>
 
-    <!-- Grammar & Parsing -->
-    <g transform="translate(290,120)">
-        <rect width="220" height="150" rx="10" fill="#FFD479" stroke="#2171C7" stroke-width="2"/>
-        <text x="110" y="30" text-anchor="middle" font-family="Arial" font-weight="bold">Grammar & Parsing</text>
-        <text x="110" y="55" text-anchor="middle" font-family="Arial" font-size="12">setgrammar.pl</text>
-        <text x="110" y="75" text-anchor="middle" font-family="Arial" font-size="12">Parse Trees</text>
-        <text x="110" y="95" text-anchor="middle" font-family="Arial" font-size="12">Token Processing</text>
+    <!-- Main Categories with their Implementations -->
+    <!-- List Operations -->
+    <g transform="translate(50,200)">
+        <rect width="300" height="300" rx="15" fill="#E3F2FD" stroke="#1976D2" stroke-width="2"/>
+        <text x="150" y="40" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="18">List Operations</text>
+        
+        <!-- MinList -->
+        <g transform="translate(20,70)">
+            <rect width="260" height="60" rx="5" fill="white" stroke="#1976D2" stroke-width="1"/>
+            <text x="20" y="25" font-family="Arial" font-weight="bold" font-size="14">minlist.pl</text>
+            <text x="20" y="45" font-family="Arial" font-size="12">Element-wise minimum comparison</text>
+        </g>
+        
+        <!-- SumMaxList -->
+        <g transform="translate(20,140)">
+            <rect width="260" height="60" rx="5" fill="white" stroke="#1976D2" stroke-width="1"/>
+            <text x="20" y="25" font-family="Arial" font-weight="bold" font-size="14">sumMaxList.pl</text>
+            <text x="20" y="45" font-family="Arial" font-size="12">Maximum sum computation</text>
+        </g>
+        
+        <!-- Postfix -->
+        <g transform="translate(20,210)">
+            <rect width="260" height="60" rx="5" fill="white" stroke="#1976D2" stroke-width="1"/>
+            <text x="20" y="25" font-family="Arial" font-weight="bold" font-size="14">postfix.pl</text>
+            <text x="20" y="45" font-family="Arial" font-size="12">List suffix verification</text>
+        </g>
+    </g>
+
+    <!-- Grammar -->
+    <g transform="translate(370,200)">
+        <rect width="300" height="300" rx="15" fill="#FFF3E0" stroke="#E65100" stroke-width="2"/>
+        <text x="150" y="40" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="18">Grammar & Parsing</text>
+        
+        <g transform="translate(20,70)">
+            <rect width="260" height="200" rx="5" fill="white" stroke="#E65100" stroke-width="1"/>
+            <text x="20" y="30" font-family="Arial" font-weight="bold" font-size="14">setgrammar.pl</text>
+            <text x="20" y="60" font-family="Arial" font-size="12">• Context-free grammar</text>
+            <text x="20" y="90" font-family="Arial" font-size="12">• Token parsing</text>
+            <text x="20" y="120" font-family="Arial" font-size="12">• Set operations</text>
+            <text x="20" y="150" font-family="Arial" font-size="12">• Recursive rules</text>
+            <text x="20" y="180" font-family="Arial" font-size="12">• Pattern matching</text>
+        </g>
     </g>
 
     <!-- Word Puzzles -->
-    <g transform="translate(530,120)">
-        <rect width="220" height="150" rx="10" fill="#98FF9F" stroke="#2171C7" stroke-width="2"/>
-        <text x="110" y="30" text-anchor="middle" font-family="Arial" font-weight="bold">Word Puzzles</text>
-        <text x="110" y="55" text-anchor="middle" font-family="Arial" font-size="12">words.pl</text>
-        <text x="110" y="75" text-anchor="middle" font-family="Arial" font-size="12">Pattern Matching</text>
-        <text x="110" y="95" text-anchor="middle" font-family="Arial" font-size="12">Constraints</text>
-    </g>
-
-    <!-- Connections -->
-    <g stroke="#666" stroke-width="2" fill="none">
-        <path d="M 160,270 C 160,320 400,320 400,270" />
-        <path d="M 400,270 C 400,320 640,320 640,270" />
+    <g transform="translate(690,200)">
+        <rect width="300" height="300" rx="15" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
+        <text x="150" y="40" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="18">Word Puzzles</text>
+        
+        <g transform="translate(20,70)">
+            <rect width="260" height="200" rx="5" fill="white" stroke="#2E7D32" stroke-width="1"/>
+            <text x="20" y="30" font-family="Arial" font-weight="bold" font-size="14">words.pl</text>
+            <text x="20" y="60" font-family="Arial" font-size="12">• Word database</text>
+            <text x="20" y="90" font-family="Arial" font-size="12">• Length constraints</text>
+            <text x="20" y="120" font-family="Arial" font-size="12">• Character matching</text>
+            <text x="20" y="150" font-family="Arial" font-size="12">• Multi-word relations</text>
+            <text x="20" y="180" font-family="Arial" font-size="12">• Backtracking search</text>
+        </g>
     </g>
 
     <!-- Footer -->
-    <rect x="100" y="400" width="600" height="60" rx="10" fill="#F8F9FA" stroke="#DDD" stroke-width="2"/>
-    <text x="400" y="430" text-anchor="middle" font-family="Arial" font-size="14">Prolog Features: Unification • Pattern Matching • Backtracking</text>
-    <text x="400" y="450" text-anchor="middle" font-family="Arial" font-size="12">Logic Programming • Declarative Style • Knowledge Representation</text>
+    <rect x="50" y="520" width="700" height="60" rx="10" fill="#ECEFF1" stroke="#546E7A" stroke-width="2"/>
+    <text x="400" y="550" text-anchor="middle" font-family="Arial" font-size="14" fill="#37474F">
+        Logic Programming • Pattern Matching • Unification • Backtracking • Knowledge Representation
+    </text>
 </svg>
